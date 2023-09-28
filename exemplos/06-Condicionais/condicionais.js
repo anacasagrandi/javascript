@@ -4,17 +4,21 @@ document.write('<h2 style="color: blue;">Condicional encadeada</h2><br>');
 
 /* if/else, else if */
 let nome = "Ignacio";
-let idade = 41;
+// let idade = 41;
 
 // Verificar idade da pessoa
 
 
 // Condicional encadeada
 let mensagem;
+let idade = 41;
 
 
-// 1ª Digitação (Aqui)
-
+if(idade > 18) {
+    mensagem = ("Você é maior de idade!");
+}else {
+    mensagem = ("Você é menor de idade!");
+}
 
 console.log(mensagem);
 document.write(`${mensagem}<br>`); 
@@ -27,6 +31,18 @@ document.write('<h2 style="color: blue;">Condicional aninhada</h2><br>');
 
 
 // 2ª Digitação (Aqui)
+if (idade >=60) {
+    mensagem = "É idoso.";
+} else if (idade >=18) {
+    mensagem = "É adulto, mas nao é idoso.";
+} else {
+    // && (Operador E)
+    if (idade >=12 && idade <18) {
+        mensagem = "É adolescente.";
+    } else {
+        mensagem = "É baby.";
+    }
+}
 
 
 document.write(`${nome}, ${mensagem} <br>`); // Mostra a tela (Navegador)
@@ -42,7 +58,16 @@ var n1 = 5.7;
 var n2 = 9;
 
 
-// 3ª Digitação (Aqui)
+media = (n1 + n2) /2;
+// //modo tradicional
+// if (media >=7) {
+//     situacao = 'Aprovado!';
+// } else {
+//     situacao = 'Reprovado!';
+// }
+
+//  Operador ternario
+situacao = media >=7 ? 'Aprovado!': 'Reprovado!';
 
 
 document.write(`Média: ${media}<br> `)
@@ -61,12 +86,23 @@ Opçôes do Chat Bot:
 3 -> dúvidas
 x -> opçao desconhecida, direcionar para um humano */
 
-let opcao = 4;
+let opcao = 3;
 let textoOpcao;
 
-
-
-// 4ª Digitação (Aqui)
+ switch (opcao ) {
+    case 1:
+        textoOpcao = 'Legal, oque deseja saber ?';
+        break;
+    case 2:
+        textoOpcao = 'Que pena, oque aconteceu ?';
+        break;
+    case 3:
+        textoOpcao = 'Certo, qual a duvida ?';
+        break;
+    case 4:
+        textoOpcao = 'Hum, não entendi ... vou transferir. ';
+        break;
+ }
 
 
 document.write(`Você escolheu a opção ${opcao} <br>`);
@@ -79,8 +115,8 @@ document.write('<h2 style="color: blue;">Operadores de comparação</h2><br>');
 
 // Operadores de comparação
 
-
-// 5ª Digitação (Aqui)
+let a = 10;
+let b = '10';
 
 
 // == se é igual/ === estritamente igual (até tipo de dados)
