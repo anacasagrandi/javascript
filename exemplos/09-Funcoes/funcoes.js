@@ -19,10 +19,8 @@ document.write('<h2 style="color: blue;">Função nomeada (Tradicional)</h2><br>
 /* Sintaxe 2 (Tradicional)
 Função nomeada */
 
-// 1ª Digitação (Aqui)
 function exemplo2() {
-    document.write("função nomeada <br>");
-
+    document.write("Função nomeada <br>");
 };
 
 exemplo2();
@@ -37,27 +35,30 @@ document.write('<h2 style="color: blue;">Arrow Function (Moderna)</h2><br>');
 /* Sintaxe 3 (Moderna)
 Função Seta/Flecha (Arrow Function) */
 
-let exemplo3 = () =>
+
+let exemplo3 = () => 
     document.write("Arrow Function <br>");
 
-    exemplo3();
+exemplo3();
 
 
 // _______________________ 3B
-//funçao para dobrar o valor
-function  dobra(valor) {
+
+// Função para dobrar o valor
+function dobra(valor) {
     return valor * 2;
 }
 
-document.write(dobra(10));
+document.write( dobra(10));
 document.write("<br>");
 
-// 3ª Digitação (Aqui)
-//funçao p multiplicar o valor sintaxe arrow function
-let dobraB = valor => valor * 300
+// Função para multiplicar o valor (Sintaxe Arrow Function)
 
-document.write(dobraB(20));
+let dobraB = valor => valor * 300;
+document.write( dobraB(20) );
 document.write("<br>");
+
+
 
 
 // ________________________________________________________________________
@@ -101,20 +102,20 @@ let preco =1250;
 let desconto = 77.88;
 let precoFinal = preco - desconto;
 
-
-// 6ª Digitação (Aqui)
-//formatar para dolar
+// Formatar para Dolar $
 function formataMoeda(valor) {
     return valor.toLocaleString ('en', {
-        style:'currency', currency: 'USD'});
-    }
-    
-//function  para real R$ sintaxe de arrow function
+        style:'currency', currency: 'USD'
+    });
+}
+
+// Formatar para Real R$ (Sintaxe de Arrow Function)
 let formataValor = valor => {
     return valor.toLocaleString ('pt-br', {
         style:'currency', currency: 'BRL'
     });
 }
+
 
 document.write( formataMoeda(preco) );
 document.write("<br>");
@@ -122,4 +123,3 @@ document.write( formataValor(desconto) );
 document.write("<br>");
 document.write( formataValor(precoFinal) );
 document.write("<br>");
-
